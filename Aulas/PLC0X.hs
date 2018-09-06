@@ -38,3 +38,8 @@ mtakeInt :: Int -> [Int] -> [Int]
 mtakeInt _ [] = []
 mtakeInt 0 _ = []
 mtakeInt n (x:xs) =  x : mtakeInt (n-1) xs
+
+mtakeBool :: Int -> [Bool] -> [Bool]
+mtakeBool _ [] = []
+mtakeBool 0 _ = []
+mtakeBool n (x:xs) =  x : mtakeBool (n-1) xs
