@@ -43,3 +43,13 @@ mtakeBool :: Int -> [Bool] -> [Bool]
 mtakeBool _ [] = []
 mtakeBool 0 _ = []
 mtakeBool n (x:xs) =  x : mtakeBool (n-1) xs
+
+iSort :: [Int] -> [Int]
+iSort [] = []
+iSort (x:xs) = ins x (iSort xs)
+
+ins :: Int -> [Int] -> [Int]
+ins n [] = [n]
+ins n (x:xs)
+    | n <= x = n:(x:xs)
+    | otherwise = x: ins n xs
