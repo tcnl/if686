@@ -59,3 +59,8 @@ ins n (x:xs)
 tamLista :: [t] ->
 tamLista [] = 0
 tamLista (x:xs) = 1 + tamLista xs
+
+mzip :: [a] -> [b] -> [(a,b)]
+mzip [] _ = []
+mzip _ [] = []
+mzip (x:xs) (y:ys) = (x,y) : mzip xs ys
