@@ -53,3 +53,9 @@ ins n [] = [n]
 ins n (x:xs)
     | n <= x = n:(x:xs)
     | otherwise = x: ins n xs
+
+--11/Set/18
+
+tamLista :: [t] ->
+tamLista [] = 0
+tamLista (x:xs) = 1 + tamLista xs
